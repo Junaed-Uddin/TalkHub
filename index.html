@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TalkHub</title>
+    <!-- css link  -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Tailwind  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Daisy UI  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- flowbite  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- font awesome icon  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- nav section  -->
+    <nav class="mx-2 sm:mx-5 lg:mx-14">
+      <div
+        class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-8 px-3"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./images/logo.png" class="h-10" alt="Flowbite Logo" />
+          <span
+            class="self-center text-2xl md:text-3xl font-extrabold whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"
+            >TalkHub</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium flex flex-col space-y-4 md:space-y-0 p-4 md:p-0 mt-4 border border-gray-200 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+          >
+            <li
+              class="tooltip hover:bg-gray-100 md:hover:bg-transparent md:border-0 flex md:justify-center items-center space-x-4"
+              data-tip="Home"
+            >
+              <button class="bg-gray-100 p-3 border rounded-full w-[50px]">
+                <i class="fa-solid fa-house"></i>
+              </button>
+              <p class="block md:hidden font-bold">Home</p>
+            </li>
+
+            <li
+              class="tooltip hover:bg-gray-100 md:hover:bg-transparent md:border-0 flex md:justify-center items-center space-x-4"
+              data-tip="Comments"
+            >
+              <button class="bg-gray-100 p-3 border rounded-full w-[50px]">
+                <i class="fa-solid fa-pencil"></i>
+              </button>
+              <p class="block md:hidden font-bold">Comments</p>
+            </li>
+
+            <li
+              class="tooltip hover:bg-gray-100 md:hover:bg-transparent md:border-0 flex md:justify-center items-center space-x-4"
+              data-tip="User"
+            >
+              <button class="bg-gray-100 p-3 border rounded-full w-[50px]">
+                <i class="fa-solid fa-user-plus"></i>
+              </button>
+              <p class="block md:hidden font-bold">User</p>
+            </li>
+
+            <li
+              class="tooltip hover:bg-gray-50 md:hover:bg-transparent md:border-0 flex md:justify-center items-center space-x-4"
+              data-tip="Flag"
+            >
+              <button class="bg-gray-100 p-3 border rounded-full w-[50px]">
+                <i class="fa-solid fa-flag"></i>
+              </button>
+              <p class="block md:hidden font-bold">Flag</p>
+            </li>
+
+            <li
+              class="tooltip hover:bg-gray-50 md:hover:bg-transparent md:border-0 flex md:justify-center items-center space-x-4"
+              data-tip="Sign in"
+            >
+              <button class="bg-blue-500 px-5 py-3 border rounded-full w-full text-white">
+                Sign in
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- banner section  -->
+      <section class="mx-2 sm:mx-5 lg:mx-14">
+        <div
+          class="hero pt-6 sm:pt-0 min-h-screen md:min-h-[500px] w-full bg-[#12132D] rounded-[32px] bg-[url('./images/bgbanner.png')]"
+        >
+          <div
+            class="hero-content flex flex-col md:flex-row text-white text-wrap px-4 sm:px-10"
+          >
+            <div class="w-full md:w-2/3 text-center md:text-start">
+              <h1 class="text-5xl sm:text-6xl font-bold leading-tight">
+                Welcome to the
+                <span
+                  class="text-transparent bg-clip-text bg-gradient-to-r from-[#797DFC] via-[#797DFC] to-pink-500"
+                  >ReTro</span
+                >
+                Forum
+              </h1>
+              <p class="py-6">
+                Share your favorite opinion and win a cup of coffee!
+              </p>
+              <div
+                class="flex justify-center md:justify-start items-center relative"
+              >
+                <input
+                  id="search-text"
+                  type="text"
+                  placeholder="Type here"
+                  class="input aboslute rounded-3xl text-black w-full md:max-w-sm"
+                />
+                <button
+                  onclick="searchCategory()"
+                  class="absolute right-1 md:left-[282px] btn btn-primary h-10 w-24 rounded-3xl btn-sm"
+                >
+                  Search
+                </button>
+              </div>
+            </div>
+            <!-- registered users container  -->
+            <div class="text-black w-full md:w-1/3">
+              <div
+                class="bg-white p-5 lg:p-8 xl:p-10 rounded-[20px] space-y-4 text-lg"
+              >
+                <div class="flex justify-between items-center">
+                  <p class="text-wrap">Registered Users</p>
+                  <span>01</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <p>Forum</p>
+                  <span>01</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <p>Topics</p>
+                  <span>05</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <p>Replies</p>
+                  <span>01</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- discuss and card section  -->
+      <section class="mx-2 sm:mx-5 lg:mx-14">
+        <div
+          class="flex flex-col items-center justify-center mt-16 lg:mt-20 w-full"
+        >
+          <h2 class="text-4xl mb-5 font-bold">Let’s Discuss</h2>
+          <p class="sm:w-1/2 text-center">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        <!-- loader  -->
+        <div id="allPostLoader" class="flex justify-center pt-10 hidden">
+          <span class="loading loading-spinner w-11 text-info"></span>
+        </div>
+
+        <!-- card & title whole container  -->
+        <div id="whole-container"
+          class="flex flex-col hidden lg:flex-row justify-center items-centers lg:space-x-4 w-full"
+        >
+          <!-- card container  -->
+          <div id="card-container" class="mt-12 lg:w-2/3 space-y-4">
+            <!-- card info  -->
+          </div>
+          <!-- whole title container  -->
+          <div
+            class="mt-8 lg:mt-12 bg-[#12132D14] rounded-2xl lg:w-1/3 p-5 h-full divide-y-2 divide-green-300 divide-dashed"
+          >
+            <!-- title container  -->
+            <div class="flex justify-between items-center">
+              <p class="font-semibold text-lg">Title</p>
+              <p class="font-semibold text-gray-500">
+                <i class="fa-solid fa-check-double text-green-500"></i> Mark As
+                Read (<span class="text-black" id="read-no">0</span>)
+              </p>
+            </div>
+            <!-- content add  -->
+            <div
+              id="content-container"
+              class="flex flex-col items-center space-y-3 justify-center mt-4"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Join forum section  -->
+      <section class="mx-2 sm:mx-5 lg:mx-14">
+        <div
+          class="hero bg-[#12132D] min-h-full rounded-[20px] mt-16 lg:mt-20 w-full"
+        >
+          <div
+            class="hero-content flex-col justify-center w-full lg:flex-row-reverse"
+          >
+            <img src="./images/joinforum.png" class="rounded-lg shadow-2xl" />
+            <div class="text-white text-center lg:text-start mt-10 lg:mt-0">
+              <h1 class="text-4xl sm:text-5xl font-bold">Join Our Forum</h1>
+              <div class="space-y-1">
+                <p class="pt-6">
+                  Share your favorite opinion and win forum coffee mug!
+                </p>
+                <p class="pb-6">
+                  Yes, you can run unit tests and view the results directly
+                  within the app.
+                </p>
+              </div>
+              <button class="btn bg-violet-500 border-none text-white">
+                Register Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- latest post  -->
+      <section class="mx-2 sm:mx-5 lg:mx-14">
+        <div
+          class="flex flex-col items-center justify-center mt-16 lg:mt-20 w-full"
+        >
+          <h2 class="text-4xl mb-5 font-bold">Latest Posts</h2>
+          <p class="sm:w-1/2 text-center">
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined.
+          </p>
+        </div>
+
+        <!-- loader  -->
+        <div id="latestPostLoader" class="flex justify-center pt-10 hidden">
+          <span class="loading loading-spinner w-11 text-info"></span>
+        </div>
+
+        <!-- latest card container  -->
+        <div
+          id="latest-post-container"
+          class="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-12"
+        ></div>
+      </section>
+
+      <!-- footer  -->
+      <section class="mt-14 lg:mt-20">
+        <footer
+          class="flex flex-col items-center space-y-6 justify-center bg-base-200 text-base-content rounded p-10"
+        >
+          <nav class="flex flex-col justify-center items-center gap-4 w-full">
+            <h1 class="text-3xl font-extrabold">TalkHub</h1>
+            <p class="text-gray-700 sm:w-1/2 text-center">
+              A platform where enthusiasts, experts, and beginners come together
+              to discuss and share knowledge on various topics.
+            </p>
+          </nav>
+          <nav>
+            <div class="flex justify-center items-center gap-4">
+              <p class="text-xl"><i class="fa-brands fa-facebook"></i></p>
+              <p class="text-xl"><i class="fa-brands fa-x-twitter"></i></p>
+              <p class="text-xl"><i class="fa-brands fa-instagram"></i></p>
+              <p class="text-xl"><i class="fa-brands fa-github"></i></p>
+            </div>
+          </nav>
+          <aside>
+            <p class="text-center">
+              Copyright © <span id="new-date"></span> All Rights Reserved
+            </p>
+          </aside>
+        </footer>
+      </section>
+    </main>
+    <!-- JS Script  -->
+    <script src="./JS/utility.js"></script>
+    <!-- flowbite JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
